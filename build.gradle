@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+}
+
+repositories {
+    maven { url 'https://jitpack.io' }
+}
+
+group 'club.issizler' // Change this
+version '0.1.0'
+
+sourceCompatibility = 1.8
+
+dependencies {
+    implementation "com.github.okyanus-mc:api:-SNAPSHOT"
+}
+
+processResources {
+    inputs.property "version", project.version
+
+    from(sourceSets.main.resources.srcDirs) {
+        include "okyanus.json"
+        expand "version": project.version
+    }
+}
