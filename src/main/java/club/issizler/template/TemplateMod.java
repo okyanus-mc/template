@@ -10,7 +10,7 @@ public class TemplateMod implements Mod {
     public void init() {
         System.out.println("Hello, world!");
 
-        CommandManager.INSTANCE.register(
+        CommandManager.getInstance().register(
                 new CommandBuilder()
                         .name("hello")
                         .run(source -> {
@@ -19,4 +19,5 @@ public class TemplateMod implements Mod {
                         })
         );
     }
+
 }
