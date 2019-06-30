@@ -4,7 +4,7 @@ import club.issizler.okyanus.api.Mod;
 import club.issizler.okyanus.api.cmd.CommandBuilder;
 import club.issizler.okyanus.api.cmd.CommandManager;
 
-public class TemplateMod implements Mod {
+public class TemplateMod extends Mod {
 
     @Override
     public void init() {

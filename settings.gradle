@@ -1,1 +1,12 @@
 rootProject.name = 'mod-template'
+
+// Development workspace path, see
+// https://okyanus-mc.github.io/dev/okyanus/workspace.html#contributing-to-okyanus-mods-alongside-okyanus
+
+if (new File("../../api").exists()) {
+    includeBuild("../../api") {
+        dependencySubstitution {
+            substitute module('club.issizler.okyanus:api') with project(':')
+        }
+    }
+}

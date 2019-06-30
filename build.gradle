@@ -3,6 +3,7 @@ plugins {
 }
 
 repositories {
+    mavenCentral()
     maven { url 'https://maven.issizler.club/repository/maven-snapshots/' } // Use maven-releases when we release
 }
 
