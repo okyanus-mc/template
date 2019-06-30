@@ -3,7 +3,7 @@ plugins {
 }
 
 repositories {
-    maven { url 'https://jitpack.io' }
+    maven { url 'https://maven.issizler.club/repository/maven-snapshots/' } // Use maven-releases when we release
 }
 
 group 'club.issizler' // Change this
@@ -12,10 +12,8 @@ version '0.1.0'
 sourceCompatibility = 1.8
 
 dependencies {
-    // Please update to the latest version
-    // https://jitpack.io/#okyanus-mc/api
-
-    implementation "com.github.okyanus-mc:api:9a026135d3"
+    // Please update this to the latest version available!
+    implementation "club.issizler.okyanus:api:0.1.0-SNAPSHOT"
 }
 
 processResources {
