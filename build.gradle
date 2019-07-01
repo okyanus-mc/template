@@ -15,13 +15,16 @@ sourceCompatibility = 1.8
 dependencies {
     // Please update this to the latest version available!
     implementation "club.issizler.okyanus:api:0.1.0-SNAPSHOT"
+
+    // Not sure why that's needed
+    implementation 'org.apache.logging.log4j:log4j-api:2.8.1'
 }
 
 processResources {
     inputs.property "version", project.version
 
     from(sourceSets.main.resources.srcDirs) {
-        include "okyanus.json"
+        include "fabric.mod.json"
         expand "version": project.version
     }
 }

@@ -2,17 +2,15 @@ package club.issizler.template;
 
 import club.issizler.okyanus.api.Mod;
 import club.issizler.okyanus.api.cmd.CommandBuilder;
-import club.issizler.okyanus.api.cmd.CommandManager;
 
 public class TemplateMod extends Mod {
 
     @Override
     public void init() {
-        System.out.println("Hello, world!");
+        getServer().getLogger().info("Hello, world!");
 
-        CommandManager.getInstance().register(
-                new CommandBuilder()
-                        .name("hello")
+        registerCommand(
+                new CommandBuilder("hello")
                         .run(source -> {
                             source.send("Hello, world!");
                             return 1;
