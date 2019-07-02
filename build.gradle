@@ -16,8 +16,11 @@ dependencies {
     // Please update this to the latest version available!
     implementation "club.issizler.okyanus:api:0.1.0-SNAPSHOT"
 
-    // Not sure why that's needed
-    implementation 'org.apache.logging.log4j:log4j-api:2.8.1'
+    // Anything in Okyanus Runtime's fatJar dependencies and anything that
+    // Minecraft/Fabric Loader uses internally should essentially be "free" to
+    // use. Meaning no additional jar size cost. (Make sure you use the same versions)
+    implementation 'com.electronwill.night-config:toml:3.4.0' // Our preferred configuration library
+    implementation 'org.apache.logging.log4j:log4j-api:2.8.1' // getServer().getLogger() requires this
 }
 
 processResources {
